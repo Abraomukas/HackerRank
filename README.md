@@ -1,4 +1,4 @@
-# Hackerrank repository
+# HackerRank repository
 
 This is a repository of all the practices I have worked on. 
 
