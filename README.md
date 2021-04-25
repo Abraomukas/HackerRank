@@ -1,39 +1,28 @@
-# HackerRank repository
+# Welcome to Java!
 
-This is a repository of all the practices I have worked on. 
+Welcome to the world of Java! In this challenge, we practice printing to stdout.
 
-## Description
-
-Every practice can be found in its own branch. I have added some extra layers to every single practice to cover more phases of the software engineering cycle. very single practice will be:
-- Tested using **JUnit**
-- Deployed as a pipeline in **Heroku**
-- **Dockerized**
-
-## Stack used
-
-- Java 8+
-- Maven
-- JUnit 5
-
-
-## Usage
-
-Switch branches to check different solutions.
+The code stubs in your editor declare a Solution class and a main method.
+Complete the main method by copying the two lines of code below and pasting them inside the body of your main method.
 
 ```
-git checkout <branch-name>
+System.out.println("Hello, World.");
+System.out.println("Hello, Java.")
 ```
+### Input format
 
-By the **Makefile** provided, several features can be showcased.
+There is no input for this challenge.
+
+### Output format
+
+You must print two lines of output:
+
+1. Print `Hello, World.` on the first line.
+2. Print `Hello, Java.` on the second line.
+
+### Sample Output
 
 ```
-make <command>
+Hello, World.
+Hello, Java.
 ```
-
-Possibilities for `<command>`
-- jar
-  - Creates an executable **jar** of the application
-- docker
-  - Creates a **Docker** containerof the application  
-- test
-  - Runs all unit tests 
