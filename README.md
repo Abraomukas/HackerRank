@@ -1,39 +1,60 @@
-# HackerRank repository
+# Java Stdin and Stdout I
 
-This is a repository of all the practices I have worked on. 
+Most HackerRank challenges require you to read input from _stdin_ (standard input) and write output to _stdout_ (standard output).
 
-## Description
+One popular way to read input from stdin is by using the _Scanner class_ and specifying the Input Stream as System.in.
+For example:
 
-Every practice can be found in its own branch. I have added some extra layers to every single practice to cover more phases of the software engineering cycle. very single practice will be:
-- Tested using **JUnit**
-- Deployed as a pipeline in **Heroku**
-- **Dockerized**
-
-## Stack used
-
-- Java 8+
-- Maven
-- JUnit 5
-
-
-## Usage
-
-Switch branches to check different solutions.
 
 ```
-git checkout <branch-name>
+Scanner scanner = new Scanner(System.in);
+String myString = scanner.next();
+int myInt = scanner.nextInt();
+scanner.close();
+
+System.out.println("myString is: " + myString);
+System.out.println("myInt is: " + myInt);
 ```
 
-By the **Makefile** provided, several features can be showcased.
+The code above creates a Scanner object named **scanner** and uses it to read a String and an int.
+It then closes the Scanner object because there is no more input to read, and prints to stdout using System.out.println(String).
+So, if our input is:
+
 
 ```
-make <command>
+Hi 5
 ```
 
-Possibilities for `<command>`
-- jar
-  - Creates an executable **jar** of the application
-- docker
-  - Creates a **Docker** containerof the application  
-- test
-  - Runs all unit tests 
+Our code will print
+
+```
+myString is: Hi
+myInt is: 5
+```
+
+Alternatively, you can use the _BufferedReader class_.
+
+### Task 
+
+In this challenge, you must read **3** integers from stdin and then print them to stdout. 
+Each integer must be printed on a new line.
+
+### Input format
+
+There are **3** lines of input, and each line contains a single integer.
+
+### Sample input
+
+```
+42
+100
+125
+```
+
+### Sample output
+
+```
+42
+100
+125
+```
