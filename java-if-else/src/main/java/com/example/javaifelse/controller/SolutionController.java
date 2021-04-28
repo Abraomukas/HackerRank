@@ -15,11 +15,11 @@ public class SolutionController {
 
     @GetMapping(path = "/")
     public String generateSolution() {
-
+        return service.generateSolution();
     }
 
     @GetMapping(path = "/docker")
     public String generateSolutionForDocker() {
-
+        return service.generateSolutionForDocker();
     }
 }
