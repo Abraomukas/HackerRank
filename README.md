@@ -1,40 +1,57 @@
-# HackerRank repository
+# Java If-Else
 
-This is a repository of all the practices I have worked on. 
+In this challenge, we test your knowledge of using if-else conditional statements to automate decision-making processes.
 
-## Description
+### Task
 
-Every practice can be found in its own branch. I have added some extra layers to every single practice to cover more phases of the software engineering cycle.
-Every practice will be:
-- Tested using **JUnit** if there are input parameters
-- **Dockerized**
-- Deployed as a pipeline in **Heroku**
+Given an integer, **n**, perform the following conditional actions:
+- If **n** is odd, print _Weird_
+- If **n** is even and in the inclusive range of **2** to **5**, print _Not Weird_
+- If **n** is even and in the inclusive range of **6** to **20**, print _Weird_
+- If **n** is even and greater than **20**, print _Not Weird_
 
-## Stack used
+Complete the stub code provided in your editor to print whether or not **n** is weird.
 
-- Java 8+
-- Maven
-- JUnit 5
+### Input format
 
+A single line containing a positive integer, **n**.
 
-## Usage
+### Constrains
 
-Switch branches to check different solutions.
+- 1 <= n <= 100
+
+### Output Format
+
+Print _Weird_ if the number is weird; otherwise, print _Not Weird_.
+
+### Sample input 0
 
 ```
-git checkout <branch-name>
+3
 ```
 
-By the **Makefile** provided, several features can be showcased.
+### Sample output 0
 
 ```
-make <command>
+Weird
 ```
 
-Possibilities for `<command>`
-- jar
-  - Creates and executes a **jar** of the application
-- docker
-  - Builds and runs a **Docker** container of the application
-- test
-  - Runs all unit tests
+### Sample input 1
+
+```
+24
+```
+
+### Sample output 1
+
+```
+Not weird
+```
+
+### Explanation
+
+Sample Case 0: **n = 3**
+**n** is odd and odd numbers are weird, so we print _Weird_.
+
+Sample Case 0: **n = 24**
+**n** > **20** and **n** is even, so it isn't weird. Thus, we print _Not Weird_.
