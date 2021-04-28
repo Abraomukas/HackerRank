@@ -19,4 +19,9 @@ public class SolutionController {
     public List<Integer> solution() {
         return service.generateSolution();
     }
+
+    @GetMapping(path = "/docker")
+    public List<Integer> solutionForDocker() {
+        return service.generateSolutionForDocker();
+    }
 }
