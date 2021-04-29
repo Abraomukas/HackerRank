@@ -3,6 +3,7 @@ package com.example.javaifelse.controller;
 import com.example.javaifelse.service.SolutionService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,8 +19,8 @@ public class SolutionController {
         return service.generateSolution();
     }
 
-    @GetMapping(path = "/docker")
-    public String generateSolutionForDocker() {
-        return service.generateSolutionForDocker();
+    @GetMapping(path = "/docker/{input}")
+    public String generateSolutionForDocker(@PathVariable("input") int input) {
+        return service.generateSolutionForDocker(input);
     }
 }

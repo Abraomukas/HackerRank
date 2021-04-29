@@ -24,7 +24,7 @@ public class SolutionService {
                 if (option >= 2 && option <= 5) {
                     return "Not Weird";
                 } else if (option >= 6 && option <= 20) {
-                    return"Weird";
+                    return "Weird";
                 } else {
                     return "Not Weird";
                 }
@@ -33,22 +33,18 @@ public class SolutionService {
         return "Invalid input!";
     }
 
-    public String generateSolutionForDocker() {
+    public String generateSolutionForDocker(int input) {
 
-        int option = new Random().nextInt(101);
+        if (input > 0) {
 
-        System.out.println("Number generated - " + option);
-
-        if (option > 0) {
-
-            if (isOdd(option)) {
+            if (isOdd(input)) {
                 return "Weird";
             } else {
 
-                if (option >= 2 && option <= 5) {
+                if (input >= 2 && input <= 5) {
                     return "Not Weird";
-                } else if (option >= 6 && option <= 20) {
-                    return"Weird";
+                } else if (input >= 6 && input <= 20) {
+                    return "Weird";
                 } else {
                     return "Not Weird";
                 }
@@ -58,6 +54,6 @@ public class SolutionService {
     }
 
     private boolean isOdd(int x) {
-        return x%2 != 0;
+        return x % 2 != 0;
     }
 }
