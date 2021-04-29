@@ -2,7 +2,7 @@ all:
 	echo "Run via Makefile..."
 
 jar:
-	mvn clean && mvn package
+	./mvnw clean && ./mvnw package
 	java -jar target/welcome-to-java-0.0.1.jar
 
 docker:
