@@ -11,7 +11,7 @@ System.out.println("Hello, Java.")
 ```
 ### Input format
 
-There is no input for this challenge.
+N/A
 
 ### Output format
 

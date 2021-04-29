@@ -1,1 +1,0 @@
-web: java -jar  target/welcome-to-java-0.0.1-SNAPSHOT.jar --server.port=8088
