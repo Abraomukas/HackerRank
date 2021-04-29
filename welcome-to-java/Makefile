@@ -9,6 +9,7 @@ docker:
 	mvn clean && mvn package
 	docker build --tag welcome .
 	docker run -d --name welcome -p 8080:8080 welcome:latest
+	docker ps
 
 test:
 	mvn test
