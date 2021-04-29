@@ -8,7 +8,6 @@ Every practice can be found in its own branch. I have added some extra layers to
 Every practice will be:
 - Tested using **JUnit** if there are input parameters
 - **Dockerized**
-- Deployed in **Netlify**
 
 ## Stack used
 
