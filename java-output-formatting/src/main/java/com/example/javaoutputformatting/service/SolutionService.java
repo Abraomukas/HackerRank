@@ -55,7 +55,7 @@ public class SolutionService {
         int length = input.length();
         StringBuilder result = new StringBuilder();
 
-        for (int i = (length - 1); i < 15; i++) {
+        for (int i = length; i < 15; i++) {
             result.append(" ");
         }
 
