@@ -1,39 +1,40 @@
-# HackerRank repository
+# Java Output Formatting
 
-This is a repository of all the practices I have worked on. 
+Java's System.out.printf function can be used to print formatted output. 
+The purpose of this exercise is to test your understanding of formatting output using printf.
 
-## Description
+### Input format
 
-Every practice can be found in its own branch. I have added some extra layers to every single practice to cover more phases of the software engineering cycle.
-Every practice will be:
-- Tested using **JUnit** if there are input parameters
-- **Dockerized**
+Every line of input will contain a String followed by an integer.
+Each String will have a maximum of **10** alphabetic characters, and each integer will be in the inclusive range from **0** to **999**.
 
-## Stack used
+### Output format
 
-- Java 8+
-- Maven
-- JUnit 5
+In each line of output there should be two columns:
+The first column contains the String and is left justified using exactly **15** characters.
+The second column contains the integer, expressed in exactly **3** digits; 
+if the original input has less than three digits, you must pad your output's leading digits with zeroes.
 
-
-## Usage
-
-Switch branches to check different solutions.
+### Sample input
 
 ```
-git checkout <branch-name>
+java 100
+cpp 65
+python 50
 ```
 
-By the **Makefile** provided, several features can be showcased.
+### Sample output
 
 ```
-make <command>
+================================
+java           100 
+cpp            065 
+python         050 
+================================
 ```
 
-Possibilities for `<command>`
-- jar
-  - Creates and executes a **jar** of the application
-- docker
-  - Builds and runs a **Docker** container of the application
-- test
-  - Runs all unit tests
+### Explanation
+
+Each String is left-justified with trailing whitespace through the first **15** characters. 
+The leading digit of the integer is the **16th** character, and each integer that was less than **3** digits now has leading zeroes.
+
