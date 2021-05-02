@@ -1,39 +1,32 @@
-# HackerRank repository
+# Java Loops I
 
-This is a repository of all the practices I have worked on. 
+Given an integer, **N**, print its first **10** multiples. Each multiple **N x i** (where **1 <= i <= 10**) should be printed on a new line in the form: _N x i = result_.
 
-## Description
+### Input format
 
-Every practice can be found in its own branch. I have added some extra layers to every single practice to cover more phases of the software engineering cycle.
-Every practice will be:
-- Tested using **JUnit** if there are input parameters
-- **Dockerized**
+A simple integer, **N**.
 
-## Stack used
+### Constrains
 
-- Java 8+
-- Maven
-- JUnit 5
+- **2 <= N <=20**
 
-
-## Usage
-
-Switch branches to check different solutions.
+### Sample input
 
 ```
-git checkout <branch-name>
+2
 ```
 
-By the **Makefile** provided, several features can be showcased.
+### Sample output
 
 ```
-make <command>
+2 x 1 = 2
+2 x 2 = 4
+2 x 3 = 6
+2 x 4 = 8
+2 x 5 = 10
+2 x 6 = 12
+2 x 7 = 14
+2 x 8 = 16
+2 x 9 = 18
+2 x 10 = 20
 ```
-
-Possibilities for `<command>`
-- jar
-  - Creates and executes a **jar** of the application
-- docker
-  - Builds and runs a **Docker** container of the application
-- test
-  - Runs all unit tests
