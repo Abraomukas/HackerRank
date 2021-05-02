@@ -20,8 +20,8 @@ class SolutionServiceTest {
 
         //then
         assertThat(expected.size()).isEqualTo(10);
-        for (int i = 1; i < 11; i++) {
-            assertThat(expected.get(i - 1).matches(anInt + " x " + i + " = " + (anInt * i))).isTrue();
+        for (int i = 0; i < 10; i++) {
+            assertThat(expected.get(i).matches("\\d+ x \\d+ = \\d+")).isTrue();
         }
     }
 }
