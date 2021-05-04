@@ -4,6 +4,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
 
 @Service
@@ -30,6 +31,16 @@ public class SolutionService {
 
     public List<String> generateSolutionForDocker() {
         List<String> result = new ArrayList<>();
+
+        int queries = new Random().nextInt(5);
+
+        for (int i = 0; i < queries; i++) {
+            int base = new Random().nextInt(50);
+            int multiplier = new Random().nextInt(50);
+            int repetitions = new Random().nextInt(15);
+
+            result.add(calculate(base, multiplier, repetitions));
+        }
 
         return result;
     }
