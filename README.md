@@ -45,4 +45,4 @@ Possibilities for `<command>`
   - Builds and runs a **Docker** container of the application
   
 - clean
-  - Stops the Docker container and prunes all containers and images
+  - Stops the **Docker** container and purges all unused images and containers
