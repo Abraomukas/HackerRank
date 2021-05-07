@@ -1,48 +1,29 @@
-# HackerRank repository
+# Java End-of-file
 
-This is a repository of all the practices I have worked on. 
+The challenge here is to read **n** lines of input until you reach EOF, then number and print all **n** lines of content.
 
-## Description
 
-Every practice can be found in its own branch. I have added some extra layers to every single practice to cover more phases of the software engineering cycle.
-Every practice will be:
+## Input format
 
-- Served using **Spring Boot's** MVC pattern
-- Tested using **JUnit** if there are input parameters
-- **Dockerized**
+Read some unknown **n** lines of input from stdin(System.in) until you reach EOF; each line of input contains a non-empty String.
 
-## Stack used
 
-![](https://img.shields.io/badge/-Java-informational?style=flat&logo=java&logoColor=white&color=darkgreen)
-![](https://img.shields.io/badge/-Spring_Boot-informational?style=flat&logo=spring&logoColor=white&color=darkgreen)
-![](https://img.shields.io/badge/-Maven-informational?style=flat&logo=maven&logoColor=white&color=darkgreen)
-![](https://img.shields.io/badge/-JUnit-informational?style=flat&logo=junit&logoColor=white&color=darkgreen)
-![](https://img.shields.io/badge/-Makefile-informational?style=flat&logo=makefile&logoColor=white&color=darkgreen)
-![](https://img.shields.io/badge/-Docker-informational?style=flat&logo=docker&logoColor=white&color=darkgreen)
+## Output format
 
-## Usage
+For each line, print the line number, followed by a single space, and then the line content received as input.
 
-Switch branches to check different solutions.
+## Sample input
 
 ```
-git checkout <branch-name>
+Hello World
+I am fine
+Read me until end-of-file.
 ```
 
-By the **Makefile** provided, several features can be showcased.
+## Sample output
 
 ```
-make <command>
+1 Hello World
+2 I am fine
+3 Read me until end-of-file.
 ```
-
-Possibilities for `<command>`
-- jar
-  - Creates and executes a **jar** of the application
-  
-- test
-  - Runs all unit tests
-  
-- docker
-  - Builds and runs a **Docker** container of the application
-  
-- clean
-  - Stops the **Docker** container and purges all unused images and containers
