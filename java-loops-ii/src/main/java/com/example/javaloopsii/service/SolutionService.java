@@ -45,6 +45,22 @@ public class SolutionService {
         return result;
     }
 
+    public List<String> generateSolutionForTesting(List<List<Integer>> queries) {
+        List<String> result = new ArrayList<>();
+
+        System.out.println(queries);
+
+        for (int i = 0; i < queries.size(); i++) {
+            int base = queries.get(i).get(0);
+            int multiplier = queries.get(i).get(1);
+            int repetitions = queries.get(i).get(2);
+
+            result.add(calculate(base, multiplier, repetitions));
+        }
+
+        return result;
+    }
+
     private String calculate(int base, int multiplier, int repetitions) {
         String result = "";
 
