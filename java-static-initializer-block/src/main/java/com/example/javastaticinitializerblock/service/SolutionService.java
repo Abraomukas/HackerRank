@@ -41,6 +41,14 @@ public class SolutionService {
     }
 
     public String generateSolutionForTesting(int breadth, int height) {
-        return null;
+        try {
+            if (breadth <= 0 || height <= 0) {
+                throw new Exception("Breadth and height must be positive");
+            }
+        } catch (Exception e) {
+            return "java.lang.Exception: " + e.getMessage();
+        }
+
+        return String.valueOf(breadth * height);
     }
 }
