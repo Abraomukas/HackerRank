@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>java-static-initializer-block</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>java-static-initializer-block</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
