@@ -1,5 +1,6 @@
 package com.example.javastaticinitializerblock.controller;
 
+import com.example.javastaticinitializerblock.service.SolutionService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
