@@ -1,48 +1,49 @@
-# HackerRank repository
+# Java Static Initializer Block
 
-This is a repository of all the practices I have worked on. 
+Static initialization blocks are executed when the class is loaded, and you can initialize static variables in those blocks.
 
-## Description
+You are given a class Solution with a main method.
+Complete the given code so that it outputs the area of a parallelogram with breadth **B** and height **H**. You should read the variables from the standard input.
 
-Every practice can be found in its own branch. I have added some extra layers to every single practice to cover more phases of the software engineering cycle.
-Every practice will be:
+If **B <= 0** or **H <= 0** , the output should be "java.lang.Exception: Breadth and height must be positive" without quotes.
 
-- Served using **Spring Boot's** MVC pattern
-- Tested using **JUnit** if there are input parameters
-- **Dockerized**
+## Input format
 
-## Stack used
+There are two lines of input.
+The first line contains **B**: the breadth of the parallelogram.
+The next line contains **H**: the height of the parallelogram.
 
-![](https://img.shields.io/badge/-Java-informational?style=flat&logo=java&logoColor=white&color=darkgreen)
-![](https://img.shields.io/badge/-Spring_Boot-informational?style=flat&logo=spring&logoColor=white&color=darkgreen)
-![](https://img.shields.io/badge/-Maven-informational?style=flat&logo=apache-maven&logoColor=white&color=darkgreen)
-![](https://img.shields.io/badge/-JUnit-informational?style=flat&logo=junit&logoColor=white&color=darkgreen)
-![](https://img.shields.io/badge/-Makefile-informational?style=flat&logo=&logoColor=white&color=darkgreen)
-![](https://img.shields.io/badge/-Docker-informational?style=flat&logo=docker&logoColor=white&color=darkgreen)
+## Constrains
 
-## Usage
+- **-100 <= B <= 100**
+- **-100 <= H <= 100**
 
-Switch branches to check different solutions.
+## Output format
 
-```
-git checkout <branch-name>
-```
+If both values are greater than zero, then the main method must output the area of the parallelogram. 
+Otherwise, print "java.lang.Exception: Breadth and height must be positive" without quotes.
 
-By the **Makefile** provided, several features can be showcased.
+### Sample input 1
 
 ```
-make <command>
+1
+3
 ```
 
-Possibilities for `<command>`
-- jar
-  - Creates and executes a **jar** of the application
-  
-- test
-  - Runs all unit tests
-  
-- docker
-  - Builds and runs a **Docker** container of the application
-  
-- clean
-  - Stops the **Docker** container and purges all unused images and containers
+### Sample output 1
+```
+3
+```
+
+### Sample input 2
+
+```
+-1
+2
+```
+
+### Sample output 2
+
+```
+java.lang.Exception: Breadth and height must be positive
+```
