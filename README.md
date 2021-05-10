@@ -1,49 +1,50 @@
-# HackerRank repository
+# Java Date and Time
 
-This is a repository of all the practices I have worked on. 
+The Calendar class is an abstract class that provides methods for converting between a specific instant 
+in time and a set of calendar fields such as YEAR, MONTH, DAY_OF_MONTH, HOUR, and so on, and for manipulating 
+the calendar fields, such as getting the date of the next week.
 
-## Description
+You are given a date. You just need to write the method, **getDay**, which returns the day on that date.
 
-Every practice can be found in its own branch. I have added some extra layers to every single practice to cover more phases of the software engineering cycle.
-Every practice will be:
+### Example
 
-- Served using **Spring Boot's** MVC pattern
-- Tested using **JUnit** if there are input parameters
-- **Dockerized**
+**month = 8**
 
-## Stack used
+**day = 14**
 
-![](https://img.shields.io/badge/-Java-informational?style=flat&logo=java&logoColor=white&color=darkgreen)
-![](https://img.shields.io/badge/-Spring_Boot-informational?style=flat&logo=spring&logoColor=white&color=darkgreen)
-![](https://img.shields.io/badge/-Maven-informational?style=flat&logo=apache-maven&logoColor=white&color=darkgreen)
-![](https://img.shields.io/badge/-JUnit-informational?style=flat&logo=junit&logoColor=white&color=darkgreen)
-![](https://img.shields.io/badge/-Makefile-informational?style=flat&logo=&logoColor=white&color=darkgreen)
-![](https://img.shields.io/badge/-Docker-informational?style=flat&logo=docker&logoColor=white&color=darkgreen)
+**year = 2017**
 
-## Usage
+The method should return **MONDAY** as the day on that date.
 
-Switch branches to check different solutions.
+### Function description
+
+findDay has the following parameters:
+- int: month
+- int day
+- int: year
+
+### Returns
+
+- string: the day of the week in capital letters
+
+### Input format
+
+A single line of input containing the space separated month, day and year, respectively, in **MM DD YYYY** format.
+
+### Constrains
+
+- **2000 < year < 3000**
+
+### Sample input
 
 ```
-git checkout <branch-name>
+08 05 2015
 ```
-
-By the **Makefile** provided, several features can be showcased.
+### Sample output
 
 ```
-make <command>
+WEDNESDAY
 ```
+### Explanation
 
-Possibilities for `<command>`:
-
-- #### `make jar`
-  - Creates and executes a **jar** of the application
-
-- #### `make test`
-  - Runs all unit tests
-
-- #### `make docker`
-  - Builds and runs a **Docker** container of the application
-
-- #### `make clean`
-  - Stops the **Docker** container and purges all unused images and containers
+The day on August **5**th **2015** was WEDNESDAY.
