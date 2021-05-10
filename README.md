@@ -34,15 +34,16 @@ By the **Makefile** provided, several features can be showcased.
 make <command>
 ```
 
-Possibilities for `<command>`
-- jar
+Possibilities for `<command>`:
+
+- #### `make jar`
   - Creates and executes a **jar** of the application
-  
-- test
+
+- #### `make test`
   - Runs all unit tests
-  
-- docker
+
+- #### `make docker`
   - Builds and runs a **Docker** container of the application
-  
-- clean
+
+- #### `make clean`
   - Stops the **Docker** container and purges all unused images and containers
