@@ -1,5 +1,6 @@
 package com.example.javainttostring.controller;
 
+import com.example.javainttostring.service.SolutionService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
