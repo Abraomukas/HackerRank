@@ -1,49 +1,52 @@
-# HackerRank repository
+# Java Currency Formatter
 
-This is a repository of all the practices I have worked on. 
-
-## Description
-
-Every practice can be found in its own branch. I have added some extra layers to every single practice to cover more phases of the software engineering cycle.
-Every practice will be:
-
-- Served using **Spring Boot's** MVC pattern
-- Tested using **JUnit** if there are input parameters
-- **Dockerized**
-
-## Stack used
-
-![](https://img.shields.io/badge/-Java-informational?style=flat&logo=java&logoColor=white&color=darkgreen)
-![](https://img.shields.io/badge/-Spring_Boot-informational?style=flat&logo=spring&logoColor=white&color=darkgreen)
-![](https://img.shields.io/badge/-Maven-informational?style=flat&logo=apache-maven&logoColor=white&color=darkgreen)
-![](https://img.shields.io/badge/-JUnit-informational?style=flat&logo=junit&logoColor=white&color=darkgreen)
-![](https://img.shields.io/badge/-Makefile-informational?style=flat&logo=&logoColor=white&color=darkgreen)
-![](https://img.shields.io/badge/-Docker-informational?style=flat&logo=docker&logoColor=white&color=darkgreen)
-
-## Usage
-
-Switch branches to check different solutions.
+Given a double-precision number, **payment**, denoting an amount of money, use the NumberFormat class' getCurrencyInstance method to convert **currency** into the US, Indian, Chinese, and French currency formats.
+Then print the formatted values as follows:
 
 ```
-git checkout <branch-name>
+US: formattedPayment
+India: formattedPayment
+China: formattedPayment
+France: formattedPayment
 ```
 
-By the **Makefile** provided, several features can be showcased.
+where **formattedPayment** is **payment** formatted according to the appropriate Locale's currency.
+
+**Note:** India does not have a built-in Locale, so you must construct one where the language is _en_ (i.e., English)
+
+## Input format
+
+A single double-precision number denoting **payment**.
+
+## Constraints
+
+- **0 <= **payment** <= 10^9**
+
+## Output Format
+
+On the first line, print **US: u** where **u** is **payment** formatted for US currency.
+
+On the second line, print **India: i** where **i** is **payment** formatted for Indian currency.
+
+On the third line, print **China: c** where **c** is **payment** formatted for Chinese currency.
+
+On the fourth line, print **France: f** where **f** is **payment** formatted for French currency.
+
+## Sample Input
 
 ```
-make <command>
+12324.134
 ```
 
-Possibilities for `<command>`:
+## Sample Output
 
-- #### `make jar`
-  - Creates and executes a **jar** of the application
+```
+US: $12,324.13
+India: Rs.12,324.13
+China: ￥12,324.13
+France: 12 324,13 €
+```
 
-- #### `make test`
-  - Runs all unit tests
+## Explanation
 
-- #### `make docker`
-  - Builds and runs a **Docker** container of the application
-
-- #### `make clean`
-  - Stops the **Docker** container and purges all unused images and containers
+Each line contains the value of **payment** formatted according to the four countries' respective currencies.
