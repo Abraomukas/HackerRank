@@ -36,6 +36,17 @@ public class SolutionService {
         return result;
     }
 
+    public List<String> generateSolutionForTesting(double payment) {
+        List<String> result = new ArrayList<>();
+        
+        result.add(formatUS(payment));
+        result.add(formatIndia(payment));
+        result.add(formatChina(payment));
+        result.add(formatFrance(payment));
+
+        return result;
+    }
+
     private String formatUS(double u) {
         NumberFormat numberFormat = NumberFormat.getCurrencyInstance(Locale.US);
 
