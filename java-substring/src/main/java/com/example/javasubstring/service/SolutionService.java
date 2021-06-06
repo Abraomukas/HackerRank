@@ -31,7 +31,7 @@ public class SolutionService {
         result.add("s: " + s);
         result.add("start: " + start);
         result.add("end: " + end);
-        if (start < end) {
+        if (start < end && end <= s.length()) {
             result.add(s.substring(start, end));
             return result;
         }
