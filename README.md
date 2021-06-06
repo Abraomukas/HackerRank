@@ -1,49 +1,32 @@
-# HackerRank repository
+# Java Substring
 
-This is a repository of all the practices I have worked on. 
+Given a string, **s**, and two indices, **start** and **end**, print a substring consisting of all characters in the inclusive range from **start** to **end - 1**.
 
-## Description
+## Input format
 
-Every practice can be found in its own branch. I have added some extra layers to every single practice to cover more phases of the software engineering cycle.
-Every practice will be:
+The first line contains a single string denoting **s**.
 
-- Served using **Spring Boot's** MVC pattern
-- Tested using **JUnit** if there are input parameters
-- **Dockerized**
+The second line contains two space-separated integers denoting the respective values of **start** and **end**.
 
-## Stack used
+## Constraints
 
-![](https://img.shields.io/badge/-Java-informational?style=flat&logo=java&logoColor=white&color=darkgreen)
-![](https://img.shields.io/badge/-Spring_Boot-informational?style=flat&logo=spring&logoColor=white&color=darkgreen)
-![](https://img.shields.io/badge/-Maven-informational?style=flat&logo=apache-maven&logoColor=white&color=darkgreen)
-![](https://img.shields.io/badge/-JUnit-informational?style=flat&logo=junit&logoColor=white&color=darkgreen)
-![](https://img.shields.io/badge/-Makefile-informational?style=flat&logo=&logoColor=white&color=darkgreen)
-![](https://img.shields.io/badge/-Docker-informational?style=flat&logo=docker&logoColor=white&color=darkgreen)
+- **1 <= |s| <= 100**
+- **0 <= start < end <= n**
+- String **s** consists of English alphabetic letters (i.e., [**a - zA - Z**]) only.
 
-## Usage
+## Output Format
 
-Switch branches to check different solutions.
+Print the substring in the inclusive range from **start** to **end - 1**.
+
+## Sample Input
 
 ```
-git checkout <branch-name>
+Helloworld
+3 7
 ```
 
-By the **Makefile** provided, several features can be showcased.
+## Sample Output
 
 ```
-make <command>
+lowo
 ```
-
-Possibilities for `<command>`:
-
-- #### `make jar`
-  - Creates and executes a **jar** of the application
-
-- #### `make test`
-  - Runs all unit tests
-
-- #### `make docker`
-  - Builds and runs a **Docker** container of the application
-
-- #### `make clean`
-  - Stops the **Docker** container and purges all unused images and containers
