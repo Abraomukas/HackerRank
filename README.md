@@ -1,49 +1,63 @@
-# HackerRank repository
+# Java Substring Comparisons
 
-This is a repository of all the practices I have worked on. 
+We define the following terms:
 
-## Description
+- Lexicographical Order, also known as alphabetic or dictionary order, orders characters as follows:
 
-Every practice can be found in its own branch. I have added some extra layers to every single practice to cover more phases of the software engineering cycle.
-Every practice will be:
+**A < B < ... < Y < Z < a < b < ... < y < z**
 
-- Served using **Spring Boot's** MVC pattern
-- Tested using **JUnit** if there are input parameters
-- **Dockerized**
+For example, ball < cat, dog < dorm, Happy < happy, Zoo < ball.
 
-## Stack used
+- A substring of a string is a contiguous block of characters in the string. For example, the substrings of abc are
+  a, b, c, ab, bc, and abc.
 
-![](https://img.shields.io/badge/-Java-informational?style=flat&logo=java&logoColor=white&color=darkgreen)
-![](https://img.shields.io/badge/-Spring_Boot-informational?style=flat&logo=spring&logoColor=white&color=darkgreen)
-![](https://img.shields.io/badge/-Maven-informational?style=flat&logo=apache-maven&logoColor=white&color=darkgreen)
-![](https://img.shields.io/badge/-JUnit-informational?style=flat&logo=junit&logoColor=white&color=darkgreen)
-![](https://img.shields.io/badge/-Makefile-informational?style=flat&logo=&logoColor=white&color=darkgreen)
-![](https://img.shields.io/badge/-Docker-informational?style=flat&logo=docker&logoColor=white&color=darkgreen)
+Given a string, **s**, and an integer, **k**, complete the function so that it finds the lexicographically smallest and largest substrings of length **k**.
 
-## Usage
+## Function Description
 
-Switch branches to check different solutions.
+Complete the getSmallestAndLargest function in the editor below.
+
+getSmallestAndLargest has the following parameters:
+
+- string s: a string
+- int k: the length of the substrings to find
+
+## Returns
+
+- string: the string ' + "\n" + ' where and are the two substrings
+
+## Input format
+
+The first line contains a string denoting **s**.
+
+The second line contains an integer denoting **k**.
+
+## Constraints
+
+- 1 <= |s| <= 1000
+- **s** consists of English alphabetic letters only (i.e., [a-zA-Z]).
+
+## Sample input 0
 
 ```
-git checkout <branch-name>
+welcometojava
+3
 ```
 
-By the **Makefile** provided, several features can be showcased.
+## Sample output 0
 
 ```
-make <command>
+ava
+wel
 ```
 
-Possibilities for `<command>`:
+## Explanation 0
 
-- #### `make jar`
-  - Creates and executes a **jar** of the application
+String **s = "welcometojava"** has the following lexicographically-ordered substrings of length **k = 3**:
 
-- #### `make test`
-  - Runs all unit tests
+**["ava", "com", "elc", "eto", "jav", "lco", "met", "oja", "ome", "toj", "wel"]**
 
-- #### `make docker`
-  - Builds and runs a **Docker** container of the application
+We then return the first (lexicographically smallest) substring, and the last (lexicographically largest) substring as
+two newline-separated values (i.e., ava\nwel).
 
-- #### `make clean`
-  - Stops the **Docker** container and purges all unused images and containers
+The stub code in the editor then prints ava as our first line of output and wel as our second line of output.
