@@ -39,6 +39,10 @@ public class SolutionService {
         return result;
     }
 
+    public String generateSolutionForTesting(int start, int end, String s) {
+        return s.substring(start, end);
+    }
+
     private String generateRandomString(int length) {
         String alphabet = "abcdefghijklmnopqrstuvwxyz" + "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
