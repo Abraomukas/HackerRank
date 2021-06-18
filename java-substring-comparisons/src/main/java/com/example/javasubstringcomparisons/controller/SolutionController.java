@@ -1,5 +1,6 @@
 package com.example.javasubstringcomparisons.controller;
 
+import com.example.javasubstringcomparisons.service.SolutionService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
