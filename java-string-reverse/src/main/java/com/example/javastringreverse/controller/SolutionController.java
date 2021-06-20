@@ -3,6 +3,7 @@ package com.example.javastringreverse.controller;
 import com.example.javastringreverse.service.SolutionService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -20,7 +21,7 @@ public class SolutionController {
     }
 
     @RequestMapping(path = "/docker")
-    public List<String> generateSolutionForDocker() {
-        return service.generateSolutionForDocker();
+    public List<String> generateSolutionForDocker(@RequestParam String A) {
+        return service.generateSolutionForDocker(A);
     }
 }
