@@ -23,6 +23,8 @@ public class SolutionService {
         inputs.add("Original: " + A);
         inputs.add("Reversed: " + new StringBuilder().append(A).reverse());
         inputs.add(isPalindrome(A));
+
+        return inputs;
     }
 
     private String isPalindrome(String word) {
