@@ -27,6 +27,10 @@ public class SolutionService {
         return inputs;
     }
 
+    public String generateSolutionForTesting(String A) {
+        return isPalindrome(A);
+    }
+
     private String isPalindrome(String word) {
         StringBuilder builder = new StringBuilder();
 
