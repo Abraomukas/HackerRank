@@ -25,7 +25,7 @@ The second line contains a string **b**.
 
 - **1 <= length(a), length(b) <= 50**
 - Strings **a** and **b** consist of English alphabetic characters.
-- The comparison should NOT be case sensitive.
+- The comparison should NOT be case-sensitive.
 
 ## Sample input 0
 
@@ -33,3 +33,62 @@ The second line contains a string **b**.
 anagram
 margana
 ```
+
+## Explanation 0 
+
+| Character | Frequency: anagram |  Frequency: margana |
+|---|---|---|
+| A or a | 3 | 3 |
+| G or g | 1 | 1 |
+| N or n | 1 | 1 |
+| M or m | 1 | 1 |
+| R or r | 1 | 1 |
+
+The two strings contain all the same letters in the same frequencies, so we print "Anagrams."
+
+## Sample Input 1
+
+```
+anagram
+marganaa
+```
+
+## Sample Output 1
+
+```
+Not Anagrams
+```
+
+## Explanation 1
+
+| Character | Frequency: anagram |  Frequency: marganaa |
+|---|---|---|
+| A or a | 3 | 4 |
+| G or g | 1 | 1 |
+| N or n | 1 | 1 |
+| M or m | 1 | 1 |
+| R or r | 1 | 1 |
+
+The two strings don't contain the same number of a's and m's, so we print "Not Anagrams".
+
+## Sample Input 2
+
+```
+Hello
+hello
+```
+
+## Sample output 2
+
+```
+Anagrams
+```
+
+## Explanation 2
+
+| Character | Frequency: Hello |  Frequency: hello |
+|---|---|---|
+| E or e | 1 | 1 |
+| H or h | 1 | 1 |
+| L or l | 1 | 1 |
+| O or o | 1 | 1 |
