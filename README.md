@@ -1,49 +1,35 @@
-# HackerRank repository
+# Java Anagrams
 
-This is a repository of all the practices I have worked on. 
+Two strings, **a** and **b**, are called anagrams if they contain all the same characters in the same frequencies. For this challenge, the test is not case-sensitive. For example, the anagrams of CAT are CAT, ACT, tac, TCA, aTC, and CtA.
 
-## Description
+## Function Description
 
-Every practice can be found in its own branch. I have added some extra layers to every single practice to cover more phases of the software engineering cycle.
-Every practice will be:
+Complete the isAnagram function in the editor.
 
-- Served using **Spring Boot's** MVC pattern
-- Tested using **JUnit** if there are input parameters
-- **Dockerized**
+isAnagram has the following parameters:
 
-## Stack used
+- string a: the first string
+- string b: the second string
 
-![](https://img.shields.io/badge/-Java-informational?style=flat&logo=java&logoColor=white&color=darkgreen)
-![](https://img.shields.io/badge/-Spring_Boot-informational?style=flat&logo=spring&logoColor=white&color=darkgreen)
-![](https://img.shields.io/badge/-Maven-informational?style=flat&logo=apache-maven&logoColor=white&color=darkgreen)
-![](https://img.shields.io/badge/-JUnit-informational?style=flat&logo=junit5&logoColor=white&color=darkgreen)
-![](https://img.shields.io/badge/-Makefile-informational?style=flat&logo=&logoColor=white&color=darkgreen)
-![](https://img.shields.io/badge/-Docker-informational?style=flat&logo=docker&logoColor=white&color=darkgreen)
+## Returns
 
-## Usage
+- boolean: If **a** an **b** are case-insensitive anagrams, return true. Otherwise, return false.
 
-Switch branches to check different solutions.
+## Input Format
+
+The first line contains a string **a**.
+
+The second line contains a string **b**.
+
+## Constraints
+
+- **1 <= length(a), length(b) <= 50**
+- Strings **a** and **b** consist of English alphabetic characters.
+- The comparison should NOT be case sensitive.
+
+## Sample input 0
 
 ```
-git checkout <branch-name>
+anagram
+margana
 ```
-
-By the **Makefile** provided, several features can be showcased.
-
-```
-make <command>
-```
-
-Possibilities for `<command>`:
-
-- #### `make jar`
-  - Creates and executes a **jar** of the application
-
-- #### `make test`
-  - Runs all unit tests
-
-- #### `make docker`
-  - Builds and runs a **Docker** container of the application
-
-- #### `make clean`
-  - Stops the **Docker** container and purges all unused images and containers
