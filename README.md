@@ -11,6 +11,12 @@ Every practice will be:
 - Tested using **JUnit** if there are input parameters
 - **Dockerized**
 
+## Stats
+
+![](https://img.shields.io/badge/badge-silver-silver)
+<br>
+![](https://img.shields.io/badge/submissions-16-darkgreen)
+
 ## Stack used
 
 ![](https://img.shields.io/badge/-Java-informational?style=flat&logo=java&logoColor=white&color=darkgreen)
