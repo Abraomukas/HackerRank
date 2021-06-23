@@ -15,7 +15,7 @@ Every practice will be:
 
 ![](https://img.shields.io/badge/badge-silver-silver)
 <br>
-![](https://img.shields.io/badge/submissions-16-darkgreen)
+![](https://img.shields.io/badge/submissions-17-darkgreen)
 
 ## Stack used
 
