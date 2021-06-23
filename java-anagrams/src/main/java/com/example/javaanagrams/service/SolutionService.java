@@ -2,8 +2,8 @@ package com.example.javaanagrams.service;
 
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.function.Function;
@@ -29,7 +29,18 @@ public class SolutionService {
     }
 
     public List<String> generateSolutionForDocker(String a, String b) {
-        return null;
+        List<String> result = new ArrayList<>();
+
+        Map<Character, Long> frequenciesInA = getFrequencies(a);
+        Map<Character, Long> frequenciesInB = getFrequencies(b);
+
+        result.add(a);
+        result.add(b);
+        result.add(frequenciesInA.toString());
+        result.add(frequenciesInB.toString());
+        result.add(frequenciesInA.equals(frequenciesInB) ? "Anagrams" : "Not Anagrams");
+
+        return result;
     }
 
     private Map<Character, Long> getFrequencies(String word) {
