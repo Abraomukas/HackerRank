@@ -1,5 +1,6 @@
 package com.example.javaanagrams.controller;
 
+import com.example.javaanagrams.service.SolutionService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
