@@ -43,6 +43,17 @@ public class SolutionService {
         return result;
     }
 
+    public String generateSolutionForTesting(String a, String b) {
+        Map<Character, Long> frequenciesInA = getFrequencies(a);
+        Map<Character, Long> frequenciesInB = getFrequencies(b);
+
+        if (frequenciesInA.equals(frequenciesInB)) {
+            return "Anagrams";
+        }
+
+        return "Not Anagrams";
+    }
+
     private Map<Character, Long> getFrequencies(String word) {
         return word.toLowerCase().chars().mapToObj(c -> (char) c).collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
     }
