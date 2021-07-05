@@ -1,55 +1,32 @@
-# HackerRank repository
+# Pattern Syntax Checker
 
-This is a repository of all the practices I have worked on. 
+Using **Regex**, we can easily match or search for patterns in a text. Before searching for a pattern, we have to specify one using some well-defined syntax.
+In this problem, you are given a pattern. You have to check whether the syntax of the given pattern is valid.
 
-## Description
+**Note:** In this problem, a regex is only valid if you can compile it using the Pattern.compile method.
 
-Every practice can be found in its own branch. I have added some extra layers to every single practice to cover more phases of the software engineering cycle.
-Every practice will be:
+## Input Format
 
-- Served using **Spring Boot's** MVC pattern
-- Tested using **JUnit** if there are input parameters
-- **Dockerized**
+The first line of input contains an integer **N**, denoting the number of test cases. 
+The next **N** lines contain a string of any printable characters representing the pattern of a regex.
 
-## Stats
+## Output Format
 
-![](https://img.shields.io/badge/badge-silver-silver)
-<br>
-![](https://img.shields.io/badge/submissions-19-darkgreen)
+For each test case, print Valid if the syntax of the given pattern is correct. Otherwise, print Invalid. Do not print the quotes.
 
-## Stack used
-
-![](https://img.shields.io/badge/-Java-informational?style=flat&logo=java&logoColor=white&color=darkgreen)
-![](https://img.shields.io/badge/-Spring_Boot-informational?style=flat&logo=spring&logoColor=white&color=darkgreen)
-![](https://img.shields.io/badge/-Maven-informational?style=flat&logo=apache-maven&logoColor=white&color=darkgreen)
-![](https://img.shields.io/badge/-JUnit-informational?style=flat&logo=junit5&logoColor=white&color=darkgreen)
-![](https://img.shields.io/badge/-Makefile-informational?style=flat&logo=&logoColor=white&color=darkgreen)
-![](https://img.shields.io/badge/-Docker-informational?style=flat&logo=docker&logoColor=white&color=darkgreen)
-
-## Usage
-
-Switch branches to check different solutions.
+## Sample Input
 
 ```
-git checkout <branch-name>
+3
+([A-Z])(.+)
+[AZ[a-z](a-z)
+batcatpat(nat
 ```
 
-By the **Makefile** provided, several features can be showcased.
+## Sample Output
 
 ```
-make <command>
+Valid
+Invalid
+Invalid
 ```
-
-Possibilities for `<command>`:
-
-- #### `make jar`
-  - Creates and executes a **jar** of the application
-
-- #### `make test`
-  - Runs all unit tests
-
-- #### `make docker`
-  - Builds and runs a **Docker** container of the application
-
-- #### `make clean`
-  - Stops the **Docker** container and purges all unused images and containers
