@@ -1,55 +1,49 @@
-# HackerRank repository
+# Java Strong Tokens
 
-This is a repository of all the practices I have worked on. 
+Given a string, **s**, matching the regular expression [A-Za-z !,?._'@]+, split the string into tokens. 
+We define a token to be one or more consecutive English alphabetic letters. Then, print the number of tokens, followed by each token on a new line.
 
-## Description
+**Note:** You may find the String.split method helpful in completing this challenge.
 
-Every practice can be found in its own branch. I have added some extra layers to every single practice to cover more phases of the software engineering cycle.
-Every practice will be:
+## Input Format
 
-- Served using **Spring Boot's** MVC pattern
-- Tested using **JUnit** if there are input parameters
-- **Dockerized**
+A simple string **s**.
 
-## Stats
+## Constraints
 
-![](https://img.shields.io/badge/badge-silver-silver)
-<br>
-![](https://img.shields.io/badge/submissions-17-darkgreen)
+- **1 <= length of s <= 4 * 10^5**
 
-## Stack used
+- **s** is composed of the following: English alphabetic letters, blank spaces, exclamation points (!), commas (,), question marks (?), periods (.), underscores (_), apostrophes ('), and at symbols (@)
 
-![](https://img.shields.io/badge/-Java-informational?style=flat&logo=java&logoColor=white&color=darkgreen)
-![](https://img.shields.io/badge/-Spring_Boot-informational?style=flat&logo=spring&logoColor=white&color=darkgreen)
-![](https://img.shields.io/badge/-Maven-informational?style=flat&logo=apache-maven&logoColor=white&color=darkgreen)
-![](https://img.shields.io/badge/-JUnit-informational?style=flat&logo=junit5&logoColor=white&color=darkgreen)
-![](https://img.shields.io/badge/-Makefile-informational?style=flat&logo=&logoColor=white&color=darkgreen)
-![](https://img.shields.io/badge/-Docker-informational?style=flat&logo=docker&logoColor=white&color=darkgreen)
+## Output Format
 
-## Usage
+On the first line, print an integer, **n**, denoting the number of tokens in string **s** (they do not need to be unique). 
+Next, print each of the **n** tokens on a new line in the same order as they appear in input string **s**.
 
-Switch branches to check different solutions.
+## Sample Input
 
 ```
-git checkout <branch-name>
+He is a very very good boy, isnt't he?
 ```
 
-By the **Makefile** provided, several features can be showcased.
+## Sample Output
 
 ```
-make <command>
+10
+He
+is
+a
+very
+very
+good
+boy
+isn
+t
+he
 ```
 
-Possibilities for `<command>`:
+## Explanation
 
-- #### `make jar`
-  - Creates and executes a **jar** of the application
+We consider a token to be a contiguous segment of alphabetic characters. 
+There are a total of **10** such tokens in string **s**, and each token is printed in the same order in which it appears in string **s**.
 
-- #### `make test`
-  - Runs all unit tests
-
-- #### `make docker`
-  - Builds and runs a **Docker** container of the application
-
-- #### `make clean`
-  - Stops the **Docker** container and purges all unused images and containers
