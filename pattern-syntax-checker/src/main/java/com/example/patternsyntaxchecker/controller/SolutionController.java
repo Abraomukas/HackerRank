@@ -1,5 +1,6 @@
 package com.example.patternsyntaxchecker.controller;
 
+import com.example.patternsyntaxchecker.service.SolutionService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
