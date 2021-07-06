@@ -1,55 +1,55 @@
-# HackerRank repository
+# Java Regex
 
-This is a repository of all the practices I have worked on. 
-
-## Description
-
-Every practice can be found in its own branch. I have added some extra layers to every single practice to cover more phases of the software engineering cycle.
-Every practice will be:
-
-- Served using **Spring Boot's** MVC pattern
-- Tested using **JUnit** if there are input parameters
-- **Dockerized**
-
-## Stats
-
-![](https://img.shields.io/badge/badge-silver-silver)
-<br>
-![](https://img.shields.io/badge/submissions-20-darkgreen)
-
-## Stack used
-
-![](https://img.shields.io/badge/-Java-informational?style=flat&logo=java&logoColor=white&color=darkgreen)
-![](https://img.shields.io/badge/-Spring_Boot-informational?style=flat&logo=spring&logoColor=white&color=darkgreen)
-![](https://img.shields.io/badge/-Maven-informational?style=flat&logo=apache-maven&logoColor=white&color=darkgreen)
-![](https://img.shields.io/badge/-JUnit-informational?style=flat&logo=junit5&logoColor=white&color=darkgreen)
-![](https://img.shields.io/badge/-Makefile-informational?style=flat&logo=&logoColor=white&color=darkgreen)
-![](https://img.shields.io/badge/-Docker-informational?style=flat&logo=docker&logoColor=white&color=darkgreen)
-
-## Usage
-
-Switch branches to check different solutions.
+Write a class called MyRegex which will contain a string pattern. 
+You need to write a regular expression and assign it to the pattern such that it can be used to validate an IP address. 
+Use the following definition of an IP address:
 
 ```
-git checkout <branch-name>
+IP address is a string in the form "A.B.C.D", where the value of A, B, C, and D may range from 0 to 255. Leading zeros are allowed. The length of A, B, C, or D can't be greater than 3.
 ```
 
-By the **Makefile** provided, several features can be showcased.
+Some valid IP addresses:
 
 ```
-make <command>
+000.12.12.034
+121.234.12.12
+23.45.12.56
 ```
 
-Possibilities for `<command>`:
+Some invalid IP addresses:
 
-- #### `make jar`
-  - Creates and executes a **jar** of the application
+```
+000.12.234.23.23
+666.666.23.23
+.213.123.23.32
+23.45.22.32.
+I.Am.not.an.ip
+```
 
-- #### `make test`
-  - Runs all unit tests
+In this problem you will be provided strings containing any combination of ASCII characters. You have to write a regular expression to find the valid IPs.
 
-- #### `make docker`
-  - Builds and runs a **Docker** container of the application
+Just write the MyRegex class which contains a String **pattern**. The string should contain the correct regular expression.
 
-- #### `make clean`
-  - Stops the **Docker** container and purges all unused images and containers
+(MyRegex class MUST NOT be public)
+
+## Sample Input
+
+```
+000.12.12.034
+121.234.12.12
+23.45.12.56
+00.12.123.123123.123
+122.23
+Hello.IP
+```
+
+## Sample Output
+
+```
+true
+true
+true
+false
+false
+false
+```
