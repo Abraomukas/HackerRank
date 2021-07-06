@@ -3,9 +3,11 @@ package com.example.patternsyntaxchecker.controller;
 import com.example.patternsyntaxchecker.service.SolutionService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @AllArgsConstructor
@@ -20,7 +22,7 @@ public class SolutionController {
     }
 
     @RequestMapping(path = "/docker")
-    public List<String> generateSolutionForDocker() {
-        return service.generateSolutionForDocker();
+    public List<String> generateSolutionForDocker(@RequestParam Map<String, String> params) {
+        return service.generateSolutionForDocker(params);
     }
 }

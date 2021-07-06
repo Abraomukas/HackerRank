@@ -4,12 +4,14 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
 
 @Service
 public class SolutionService {
+
     public List<String> generateSolution() {
         List<String> result = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
@@ -33,7 +35,17 @@ public class SolutionService {
         return result;
     }
 
-    public List<String> generateSolutionForDocker() {
-        return null;
+    public List<String> generateSolutionForDocker(Map<String, String> params) {
+        List<String> result = new ArrayList<>();
+
+        for (String pattern : params.values()) {
+            try {
+                Pattern.compile(pattern);
+                result.add("Valid");
+            } catch (PatternSyntaxException e) {
+                result.add("Invalid");
+            }
+        }
+        return result;
     }
 }
