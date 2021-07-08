@@ -3,16 +3,16 @@ all:
 
 jar:
 	mvn clean && mvn package
-	java -jar target/pattern-syntax-checker-0.0.1.jar
+	java -jar target/java-regex-0.0.1.jar
 
 docker:
 	mvn clean && mvn package
-	docker build --tag pattern-syntax-checker .
-	docker run -d --name pattern-syntax-checker -p 8080:8080 pattern-syntax-checker:latest
+	docker build --tag java-regex .
+	docker run -d --name java-regex -p 8080:8080 java-regex:latest
 	docker ps
 test:
 	mvn test
 
 clean:
-	docker stop pattern-syntax-checker
+	docker stop java-regex
 	docker system prune --force
