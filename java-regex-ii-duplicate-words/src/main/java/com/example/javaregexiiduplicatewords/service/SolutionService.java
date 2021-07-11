@@ -39,6 +39,19 @@ public class SolutionService {
     }
 
     public List<String> generateSolutionForDocker(Map<String, String> params) {
-        return null;
+        List<String> sentences = new ArrayList<>();
+        String regex = "\\b(\\w+)(\\b\\W+\\b\\1\\b)*";
+        Pattern pattern = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);
+
+        for (String sentence : params.values()) {
+            Matcher matcher = pattern.matcher(sentence);
+            sentences.add("BEFORE - " + sentence);
+            while (matcher.find()) {
+                sentence = sentence.replaceAll(matcher.group(), matcher.group(1));
+            }
+            sentences.add("AFTER - " + sentence);
+        }
+
+        return sentences;
     }
 }
