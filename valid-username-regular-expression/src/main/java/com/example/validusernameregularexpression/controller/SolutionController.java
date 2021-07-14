@@ -3,9 +3,11 @@ package com.example.validusernameregularexpression.controller;
 import com.example.validusernameregularexpression.service.SolutionService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @AllArgsConstructor
@@ -20,7 +22,7 @@ public class SolutionController {
     }
 
     @RequestMapping(path = "/docker")
-    public List<String > generateSolutionFprDocker() {
-        return service.generateSolutionForDocker();
+    public List<String> generateSolutionFprDocker(@RequestParam Map<String, String> params) {
+        return service.generateSolutionForDocker(params);
     }
 }
