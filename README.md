@@ -13,7 +13,7 @@ Every practice will be:
 
 ## Stats
 
-![](https://img.shields.io/badge/badge-silver-silver)
+![Badge](https://img.shields.io/badge/badge-gold-gold)
 <br>
 ![](https://img.shields.io/badge/submissions-22-darkgreen)
 
